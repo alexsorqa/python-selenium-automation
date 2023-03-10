@@ -6,8 +6,12 @@ from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 
 # init driver
+<<<<<<< HEAD
 service = Service('/Users/asorokin/Desktop/careerist/python-selenium-automation/chromedriver')
 driver = webdriver.Chrome(service=service)
+=======
+driver = webdriver.Chrome(executable_path= '/Users/asorokin/Desktop/careerist/python-selenium-automation/chromedriver')
+>>>>>>> ee43ac350a6216d68391d8c38be3f8a15db9a7d2
 driver.maximize_window()
 driver.wait = WebDriverWait(driver, 10)
 
