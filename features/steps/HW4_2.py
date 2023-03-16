@@ -1,23 +1,17 @@
 from selenium.webdriver.common.by import By
 from behave import given, when, then
-<<<<<<< HEAD
 from selenium.webdriver.support import expected_conditions as EC
+from time import sleep
 
 
 ADD_TO_CART = (By.ID, "add-to-cart-button")
 WATER = (By.XPATH, "//div[contains(text(), 'Sparkling ICE, Black Raspberry')]")
-=======
-from time import sleep
->>>>>>> ee43ac350a6216d68391d8c38be3f8a15db9a7d2
 
 
 @then("Click on water")
 def verify_water(context):
-<<<<<<< HEAD
     context.driver.wait.until(EC.element_to_be_clickable(WATER), message="Item is not displayed").click()
-=======
     context.driver.find_element(By.XPATH, "//div[contains(text(), 'Sparkling ICE, Black Raspberry')]").click()
->>>>>>> ee43ac350a6216d68391d8c38be3f8a15db9a7d2
 
 
 @then("Water page is shown")
@@ -37,12 +31,9 @@ def quantity_select_items(context):
 
 @then("Click on Add to Cart")
 def water_add_to_cart(context):
-<<<<<<< HEAD
     context.driver.wait.until(EC.element_to_be_clickable(ADD_TO_CART)).click()
-=======
     context.driver.find_element(By.ID, "add-to-cart-button").click()
     sleep(3)
->>>>>>> ee43ac350a6216d68391d8c38be3f8a15db9a7d2
 
 
 @then("Click on Cart icon")
